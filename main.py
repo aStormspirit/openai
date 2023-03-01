@@ -12,6 +12,9 @@ dp = Dispatcher(bot)
 
 @dp.message_handler()
 async def send(message: types.Message):
+    """
+    Модель давинчи 3 для диалогов
+    """
     response = openai.Completion.create(
         model="text-davinci-003",
         prompt=message.text,
